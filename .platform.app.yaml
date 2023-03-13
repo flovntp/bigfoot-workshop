@@ -5,7 +5,7 @@
 name: app
 
 # The type of the application to build.
-type: php:8.2
+type: php:8.1
 
 dependencies:
     php:
@@ -37,7 +37,7 @@ variables:
 hooks:
     build: |
         set -x -e
-
+        bash ./install-openswoole.sh openswoole 4.10.0
         curl -s https://get.symfony.com/cloud/configurator | bash
         symfony-build
     deploy: |
@@ -58,9 +58,9 @@ disk: 2048
 
 # The mounts that will be performed when the package is deployed.
 mounts:
-    "/var":
-        source: local
-        source_path: "var"
+    "/var": { source: local, source_path: "var" }
+    "/include": { source: local, source_path: "include" }
+    "/valgrind": { source: local, source_path: "valgrind" }
 
 # The configuration of app when it is exposed to the web.
 web:
@@ -69,8 +69,14 @@ web:
             # The public directory of the app, relative to its root.
             root: "public"
             # The front-controller script to send non-static requests to.
-            passthru: "/index.php"
+            passthru: true
             expires: 1h
+
+    commands:
+        start: php bin/console swoole:server:run --port=$PORT
+    upstream:
+        socket_family: tcp
+        protocol: http
 
 crons:
     update-sighting:
