@@ -53,7 +53,6 @@
         "upscale/ext-openswoole": "v4.10.0"
     },
     "require-dev": {
-        "upscale/swoole-blackfire": "^4.0",
         "dama/doctrine-test-bundle": "^7.0",
         "doctrine/doctrine-fixtures-bundle": "^3.4",
         "fakerphp/faker": "^1.21",
