@@ -38,6 +38,8 @@ hooks:
     build: |
         set -x -e
         bash ./install-openswoole.sh openswoole 4.10.0
+#        curl -fsS https://raw.githubusercontent.com/platformsh/snippets/main/src/install_swoole.sh |  bash openswoole 4.11.0
+
         curl -s https://get.symfony.com/cloud/configurator | bash
         symfony-build
     deploy: |

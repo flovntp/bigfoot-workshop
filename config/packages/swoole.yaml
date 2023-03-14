@@ -2,3 +2,4 @@ swoole:
   http_server:
     services:
       blackfire_monitoring: true
+      blackfire_profiling: true
