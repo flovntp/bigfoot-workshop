@@ -14,12 +14,14 @@
         "php": ">=8.1",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "blackfire/php-sdk": "^1.33",
         "composer/package-versions-deprecated": "^1.11",
         "doctrine/annotations": "^1.0",
         "doctrine/doctrine-bundle": "^2.7",
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.11",
         "phpdocumentor/reflection-docblock": "^5.3",
+        "pixelfederation/swoole-bundle": "dev-blackfire_monitoring",
         "sensio/framework-extra-bundle": "^6.2",
         "symfony/asset": "^6.2",
         "symfony/console": "^6.2",
@@ -48,9 +50,8 @@
         "twig/extra-bundle": "^3.3",
         "twig/intl-extra": "^3.3",
         "twig/markdown-extra": "^3.3",
-        "pixelfederation/swoole-bundle": "dev-blackfire_monitoring",
-        "upscale/ext-swoole": "v4.10.0",
-        "upscale/ext-openswoole": "v4.10.0"
+        "upscale/ext-openswoole": "v4.10.0",
+        "upscale/ext-swoole": "v4.10.0"
     },
     "require-dev": {
         "dama/doctrine-test-bundle": "^7.0",
