@@ -39,7 +39,7 @@ hooks:
     build: |
         set -x -e
 
-        bash ./install-openswoole.sh openswoole 4.10.0
+        bash ./install-openswoole.sh openswoole 4.10.0 
 
         curl -s https://get.symfony.com/cloud/configurator | bash
         symfony-build
