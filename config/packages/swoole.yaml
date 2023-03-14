@@ -1,5 +1,5 @@
-swoole:
-  http_server:
-    services:
-      blackfire_monitoring: true
-      blackfire_profiler: true
+#swoole:
+#  http_server:
+#    services:
+#      blackfire_monitoring: true
+#      blackfire_profiler: true
