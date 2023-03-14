@@ -51,7 +51,8 @@
         "twig/intl-extra": "^3.3",
         "twig/markdown-extra": "^3.3",
         "upscale/swoole-blackfire": "^4.0",
-        "upscale/ext-swoole": "v4.10.0"
+        "upscale/ext-swoole": "v4.10.0",
+        "upscale/ext-openswoole": "v4.10.0"
     },
     "require-dev": {
         "dama/doctrine-test-bundle": "^7.0",
