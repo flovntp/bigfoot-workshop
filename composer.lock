@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a98e68f58f3dec0499a944beefecdd92",
+    "content-hash": "40be5ad2c856cef02d4df065b9cc0a2a",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -7987,46 +7987,6 @@
                 }
             ],
             "time": "2022-12-27T12:26:20+00:00"
-        },
-        {
-            "name": "upscale/ext-openswoole",
-            "version": "v4.10.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/upscalesoftware/ext-openswoole.git",
-                "reference": "201f253d0b5a28fb9d0e45476b64c617d39d5d23"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/upscalesoftware/ext-openswoole/zipball/201f253d0b5a28fb9d0e45476b64c617d39d5d23",
-                "reference": "201f253d0b5a28fb9d0e45476b64c617d39d5d23",
-                "shasum": ""
-            },
-            "require": {
-                "ext-openswoole": "self.version"
-            },
-            "replace": {
-                "upscale/ext-swoole": "*"
-            },
-            "type": "metapackage",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "description": "Wrapper for ext-openswoole interchangeable with ext-swoole",
-            "keywords": [
-                "Open Swoole",
-                "ext-openswoole",
-                "ext-swoole",
-                "extension",
-                "openswoole",
-                "swoole"
-            ],
-            "support": {
-                "issues": "https://github.com/upscalesoftware/ext-openswoole/issues",
-                "source": "https://github.com/upscalesoftware/ext-openswoole/tree/v4.12.0"
-            },
-            "time": "2022-11-21T02:18:44+00:00"
         },
         {
             "name": "webmozart/assert",
