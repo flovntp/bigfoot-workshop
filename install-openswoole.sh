@@ -27,6 +27,7 @@ copy_lib() {
     SWOOLE_PROJECT=$1;
     SWOOLE_BINARY=$2;
 
+    echo "cp ${PLATFORM_CACHE_DIR}/${SWOOLE_BINARY}.so ${PLATFORM_APP_DIR}/${SWOOLE_PROJECT}.so"
     cp "${PLATFORM_CACHE_DIR}/${SWOOLE_BINARY}.so" "${PLATFORM_APP_DIR}/${SWOOLE_PROJECT}.so"
 }
 
@@ -48,6 +49,7 @@ move_extension() {
     SWOOLE_PROJECT=$1;
     SWOOLE_BINARY=$2;
 
+    echo "mv ${PLATFORM_CACHE_DIR}/${SWOOLE_PROJECT}/swoole-src/modules/${SWOOLE_PROJECT}.so ${PLATFORM_CACHE_DIR}/${SWOOLE_BINARY}.so"
     mv "${PLATFORM_CACHE_DIR}/${SWOOLE_PROJECT}/swoole-src/modules/${SWOOLE_PROJECT}.so" "${PLATFORM_CACHE_DIR}/${SWOOLE_BINARY}.so"
 }
 
