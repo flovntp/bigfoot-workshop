@@ -16,8 +16,8 @@
     </div>
 
     <h3>Littlefoot (i.e. Human) Reactions</h3>
-    
-    {% for comment in sighting.comments %}
+    {%  set comments = sighting.comments %}
+    {% for comment in comments %}
         <div class="comment-container mb-3">
             <div class="row">
                 <div class="col-1">        
