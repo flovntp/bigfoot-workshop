@@ -11,7 +11,7 @@ use Symfony\Contracts\Cache\ItemInterface;
 
 class AppExtension extends AbstractExtension
 {
-    public function __construct(private CommentHelper $commentHelper, private CacheInterface $cache)
+    public function __construct(private CommentHelper $commentHelper, private $userStatuses = [])
     {
     }
 
@@ -26,11 +26,20 @@ class AppExtension extends AbstractExtension
     {
         $key = sprintf('user_activity_text_%s', $user->getId());
 
-        return $this->cache->get($key, function(ItemInterface $item) use ($user) {
-            $item->expiresAfter(3600);
+        if (!isset($this->userStatuses[$user->getId()])) {
+            $this->userStatuses[$user->getId()] = $this->calculateUserActivityText($user);
+        }
 
-            return $this->calculateUserActivityText($user);
-        });
+        return $this->userStatuses[$user->getId()];
+
+//
+//
+//
+//        return $this->cache->get($key, function(ItemInterface $item) use ($user) {
+//            $item->expiresAfter(3600);
+//
+//            return $this->calculateUserActivityText($user);
+//        });
     }
 
     private function calculateUserActivityText(User $user): string
