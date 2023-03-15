@@ -35,10 +35,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: Types::JSON)]
     private array $roles = [];
 
-    #[ORM\OneToMany(mappedBy: "owner", targetEntity: BigFootSighting::class)]
+    #[ORM\OneToMany(mappedBy: "owner", targetEntity: BigFootSighting::class, fetch: "EXTRA_LAZY")]
     private Collection $bigFootSightings;
 
-    #[ORM\OneToMany(mappedBy: "owner", targetEntity: Comment::class)]
+    #[ORM\OneToMany(mappedBy: "owner", targetEntity: Comment::class, fetch: "EXTRA_LAZY")]
     private Collection $comments;
 
     #[ORM\Column(type: 'datetime')]
