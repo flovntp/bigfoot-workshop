@@ -3,7 +3,6 @@ db:
     disk: 2048
 
 cache:
-    type: redis-persistent:7.0
-    disk: 256
+    type: redis:7.0
     configuration:
         maxmemory_policy: volatile-lru
