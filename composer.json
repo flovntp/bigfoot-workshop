@@ -20,6 +20,7 @@
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.11",
         "phpdocumentor/reflection-docblock": "^5.3",
+        "predis/predis": "^2.1",
         "sensio/framework-extra-bundle": "^6.2",
         "symfony/asset": "^6.2",
         "symfony/console": "^6.2",
