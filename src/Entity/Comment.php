@@ -22,7 +22,7 @@ class Comment
     #[ORM\JoinColumn(nullable: false)]
     private ?User $owner = null;
 
-    #[ORM\ManyToOne(targetEntity: BigFootSighting::class, inversedBy: 'comments')]
+    #[ORM\ManyToOne(targetEntity: BigFootSighting::class, inversedBy: 'comments', fetch: "EXTRA_LAZY")]
     #[ORM\JoinColumn(nullable: false)]
     private ?BigFootSighting $bigFootSighting = null;
 
