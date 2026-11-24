@@ -1,0 +1,28 @@
+$schema: https://raw.githubusercontent.com/CodSpeedHQ/codspeed/refs/heads/main/schemas/codspeed.schema.json
+
+# Each benchmark runs one PHP process in the "bench" environment, on the
+# SQLite database that `php benchmarks/setup.php` creates. See benchmarks/README.md.
+options:
+  warmup-time: 1s
+  max-time: 5s
+
+benchmarks:
+  - name: "GET / (homepage)"
+    id: homepage
+    exec: php benchmarks/request.php /
+
+  - name: "GET /_sightings?page=2 (sightings list, next page)"
+    id: sightings-page
+    exec: php benchmarks/request.php "/_sightings?page=2"
+
+  - name: "GET /sighting/1 (sighting with few comments)"
+    id: sighting-small
+    exec: php benchmarks/request.php /sighting/1
+
+  - name: "GET /sighting/135 (sighting with 520 comments)"
+    id: sighting-large
+    exec: php benchmarks/request.php /sighting/135
+
+  - name: "app:update-sighting-scores command"
+    id: update-sighting-scores
+    exec: php benchmarks/command.php app:update-sighting-scores

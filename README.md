@@ -1,5 +1,7 @@
 # Blackfire.io: Revealing Performance Secrets with Profiling
 
+[![CodSpeed](https://img.shields.io/endpoint?url=https://codspeed.io/badge.json)](https://app.codspeed.io/flovntp/bigfoot-workshop?utm_source=badge)
+
 Well hi there! This repository holds the code and script
 for the [Blackfire.io: Revealing Performance Secrets with Profiling](https://symfonycasts.com/screencast/blackfire) course on SymfonyCasts.
 
@@ -23,6 +25,10 @@ If not, DM your favorite trainer with the email address associated with your Bla
 https://blackfire.io/docs/integrations/paas/ddev <br>
 Make sure to select the workshop environment to have the correct credentials auto-filled.<br>
 
+
+## Benchmarks
+Performance benchmarks run with [CodSpeed](https://codspeed.io) on every pull request.
+See [benchmarks/README.md](benchmarks/README.md) to run them locally.
 
 ## Get Started with DDEV - DDEV Docs
 Do local website development on your computer or in the cloud with DDEV.
